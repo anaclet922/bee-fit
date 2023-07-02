@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "268154966103",
+    "project_id": "beefit-3b937",
+    "storage_bucket": "beefit-3b937.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268154966103:android:5318bceab29ff09529d312",
+        "android_client_info": {
+          "package_name": "com.beefit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268154966103-8bjp8fpeg6oak0fgu6a7mf742o4tnhcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-bcLZmDX03R-uh-p3jwA3j47My8BYQt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268154966103-8bjp8fpeg6oak0fgu6a7mf742o4tnhcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268154966103:android:4a901900f8d5462f29d312",
+        "android_client_info": {
+          "package_name": "com.example.bee_fit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268154966103-8bjp8fpeg6oak0fgu6a7mf742o4tnhcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-bcLZmDX03R-uh-p3jwA3j47My8BYQt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268154966103-8bjp8fpeg6oak0fgu6a7mf742o4tnhcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
