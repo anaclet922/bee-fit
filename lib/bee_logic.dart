@@ -61,7 +61,7 @@ class BeeLogic extends GetxController {
 
   void calculateBmi() {
     double height =
-        double.parse(heightEditingController.value.text.toString()) / 100;
+        double.parse(heightEditingController.value.text.toString());
     double weight = double.parse(weightEditingController.value.text.toString());
     double b = weight / (height * height);
     bmi.value = b;
