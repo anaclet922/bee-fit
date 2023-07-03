@@ -20,6 +20,7 @@ class BmiCalculator extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(30, 15, 30, 0),
                 child: TextField(
+                  keyboardType: TextInputType.number,
                   controller: viewModel.heightEditingController.value,
                   decoration: InputDecoration(
                       fillColor: Colors.white,
@@ -28,13 +29,14 @@ class BmiCalculator extends StatelessWidget {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      hintText: 'Enter Your Height In Centimeters'),
+                      hintText: 'Enter Your Height In Meters'),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(30, 15, 30, 0),
                 child: TextField(
                   controller: viewModel.weightEditingController.value,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                       fillColor: Colors.white,
                       filled: true,
@@ -69,7 +71,7 @@ class BmiCalculator extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
                       color: const Color.fromRGBO(255, 255, 0, 1)),
-                  child: Text('BMI value: ${viewModel.bmi.value.toStringAsFixed(2)}'),
+                  child: Text('BMI value: ${viewModel.bmi.value.toStringAsFixed(2)} kg/m\u00B2'),
                 ),
               ),
               Obx(() =>

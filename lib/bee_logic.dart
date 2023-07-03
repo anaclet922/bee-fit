@@ -66,16 +66,18 @@ class BeeLogic extends GetxController {
     double b = weight / (height * height);
     bmi.value = b;
 
-    if (b > 18.5) {
+    if (b > 18.9) {
       bmiStatus.value = 'Under weight';
-    } else if (b >= 18.5 && b <= 24.9) {
-      bmiStatus.value = 'Healthy range';
+    } else if (b >= 19 && b <= 24.9) {
+      bmiStatus.value = 'Normal weight';
     } else if (b >= 25 && b <= 29.9) {
       bmiStatus.value = 'Over weight';
-    } else if (b >= 30 && b <= 39.9) {
-      bmiStatus.value = 'Obesity';
+    } else if (b >= 30 && b <= 34.9) {
+      bmiStatus.value = '1\u02e2\u1d57 Level of Obesity';
+    }  else if (b >= 35 && b <= 39.9) {
+      bmiStatus.value = '2\u207f\u1d48 Level of Obesity';
     } else if (b >= 40) {
-      bmiStatus.value = 'Severe obesity';
+      bmiStatus.value = '3\u02b3\u1d48 Level of Obesity (Life is at risk)';
     }
   }
 
