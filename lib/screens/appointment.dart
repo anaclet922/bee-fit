@@ -42,6 +42,11 @@ class Appointment extends StatelessWidget {
         ),
       );
     }
+
+    if(viewModel.isSignedIn.value){
+      viewModel.assignNamesForSigned();
+    }
+
     return Center(
       child: Container(
         padding: const EdgeInsets.all(30),

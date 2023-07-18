@@ -57,8 +57,16 @@ class BeeLogic extends GetxController {
   RxBool isSignedIn = false.obs;
   RxBool isAdmin = false.obs;
   RxString signedInName = ''.obs;
+  RxString signedInPhone = ''.obs;
+  RxString signedInEmail = ''.obs;
+
   RxBool rememberMe = true.obs;
 
+  void assignNamesForSigned(){
+    appointmentNameController.value.text = signedInName.value;
+    appointmentPhoneController.value.text = signedInPhone.value;
+    appointmentEmailController.value.text = signedInEmail.value;
+  }
   void calculateBmi() {
     double height =
         double.parse(heightEditingController.value.text.toString());
@@ -139,6 +147,8 @@ class BeeLogic extends GetxController {
               backgroundColor: Colors.green, colorText: Colors.white);
           isSignedIn.value = true;
           signedInName.value = u.name;
+          signedInPhone.value = u.phone;
+          signedInEmail.value = u.email;
 
           SharedPreferences prefs = await SharedPreferences.getInstance();
           await prefs.setBool('isSignedIn', true);
@@ -186,9 +196,14 @@ class BeeLogic extends GetxController {
         if (snapshot.exists) {
           Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
           signedInName.value = data['name'];
+          signedInPhone.value = data['phone'];
+          signedInEmail.value = data['email'];
           isAdmin.value = data['role'] == 'user' ? false : true;
           Get.toNamed('/');
         }
+      }else{
+        Get.snackbar('Error', 'Incorrect Email or password.',
+            backgroundColor: Colors.red, colorText: Colors.white);
       }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
